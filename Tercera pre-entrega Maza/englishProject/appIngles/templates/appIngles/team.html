@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team</title>
+</head>
+<body>
+    <h1>Team</h1>
+
+    <button id="mostrarEquipo" class="btn btn-primary">Team</button>
+
+    <div id="equipoInfo" style="display: none;">
+        <!-- Aquí puedes mostrar información sobre los distintos miembros del equipo -->
+        <h2>Our Team:</h2>
+        <ul>
+            <li>Andy</li>
+            <li>Rose</li>
+            <li>John</li>
+            <!-- Agrega más miembros según sea necesario -->
+        </ul>
+
+        <!-- Formulario para unirse al equipo -->
+        <h2>Join us!</h2>
+        <p>Please enter your email to join the team of english in focus:</p>
+        <form id="formularioUnirseEquipo">
+            <input type="email" id="email" placeholder="Correo electrónico" required>
+            <button type="submit" class="btn btn-primary">Join</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("mostrarEquipo").addEventListener("click", function() {
+            document.getElementById("equipoInfo").style.display = "block";
+        });
+
+        // Aquí puedes agregar JavaScript para manejar el envío del formulario y procesar la dirección de correo electrónico.
+        document.getElementById("formularioUnirseEquipo").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var email = document.getElementById("email").value;
+            // Aquí puedes enviar la dirección de correo electrónico a tu servidor o realizar otras acciones necesarias.
+            alert("You sent us your email we will contact you as soon as posible! " );
+        });
+    </script>
+</body>
+</html>
